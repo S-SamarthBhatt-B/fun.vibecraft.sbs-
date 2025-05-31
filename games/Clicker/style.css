@@ -1,0 +1,164 @@
+:root {
+  --dark-purple: #1c1b2f;
+  --vibrant-purple: #8e44ad;
+  --electric-aqua: #00ffff;
+  --deep-indigo: #2e2c4a;
+  --soft-teal: #26d7c4;
+  --bright-white: #ffffff;
+  --muted-lavender: #9b89b3;
+  --slate-gray: #aaaaaa;
+  --glow-blue: #4fd0e6;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('img/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--bright-white);
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  color: var(--electric-aqua);
+  margin: 0 0 1rem;
+}
+
+#mainLayout {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  align-items: flex-start;
+}
+
+#challengeContainer, #clickerContainer, #shopContainer {
+  background-color: var(--deep-indigo);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px var(--glow-blue);
+  text-align: center;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  #mainLayout {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #challengeContainer, #clickerContainer, #shopContainer {
+    width: 90%;
+  }
+}
+
+#leaderboard {
+  background-color: var(--deep-indigo);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px var(--glow-blue);
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1000px;
+}
+
+#leaderboard ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#leaderboard li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--muted-lavender);
+}
+
+p, label {
+  color: var(--muted-lavender);
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: var(--vibrant-purple);
+  color: var(--bright-white);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: var(--soft-teal);
+  color: var(--dark-purple);
+  transform: scale(1.05);
+}
+
+img#cookie {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--glow-blue);
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+img#cookie:hover {
+  transform: scale(1.1);
+}
+
+input[type="password"] {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.large-select {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#adminControls {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #mainLayout {
+    flex-direction: column;
+    align-items: center;
+  }
+  #challengeContainer, #clickerContainer, #shopContainer {
+    width: 90%;
+  }
+  #leaderboard {
+    width: 95%;
+  }
+  img#cookie {
+    width: 120px;
+    height: 120px;
+  }
+}
