@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VibeCraft Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1C1B2F;
+      color: #FFFFFF;
+    }
+    header {
+      background-color: #2E2C4A;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      color: #00FFFF;
+    }
+    .game-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .game-card {
+      background-color: #2E2C4A;
+      border: 2px solid #8E44AD;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .game-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #4FD0E6;
+    }
+    .game-card h3 {
+      color: #00FFFF;
+    }
+    .game-card a {
+      text-decoration: none;
+      color: #FFFFFF;
+      display: block;
+      margin-top: 10px;
+      background-color: #8E44AD;
+      padding: 10px;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .game-card a:hover {
+      background-color: #26D7C4;
+    }
+  </style>
+</head>
+<body>
+  <header>🎮 VibeCraft Fun Zone</header>
+
+  <div class="game-container">
+    <!-- Game Card Example -->
+    <div class="game-card">
+      <h3>Space Invaders</h3>
+      <a href="games/space-invaders/index.html" target="_blank">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h3>Flappy Bird</h3>
+      <a href="games/flappy-bird/index.html" target="_blank">Play</a>
+    </div>
+
+    <!-- Add more cards below -->
+    <!--
+    <div class="game-card">
+      <h3>Your Game Title</h3>
+      <a href="games/your-game-folder/index.html" target="_blank">Play</a>
+    </div>
+    -->
+  </div>
+</body>
+</html>
