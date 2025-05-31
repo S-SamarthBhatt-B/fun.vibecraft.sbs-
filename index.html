@@ -4,20 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VibeCraft Games</title>
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background-color: #1C1B2F;
+      background: url('img/bg.png') no-repeat center center fixed;
+      background-size: cover;
       color: #FFFFFF;
     }
     header {
-      background-color: #2E2C4A;
+      background-color: rgba(46, 44, 74, 0.8);
       padding: 20px;
       text-align: center;
       font-size: 2rem;
       color: #00FFFF;
+      backdrop-filter: blur(4px);
     }
     .game-container {
       display: grid;
@@ -26,13 +29,15 @@
       padding: 40px;
     }
     .game-card {
-      background-color: #2E2C4A;
+      background: url('img/card-bg.png') no-repeat center center;
+      background-size: cover;
       border: 2px solid #8E44AD;
       border-radius: 15px;
       padding: 20px;
       text-align: center;
       transition: transform 0.2s, box-shadow 0.3s;
       cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
     .game-card:hover {
       transform: scale(1.03);
@@ -40,6 +45,7 @@
     }
     .game-card h3 {
       color: #00FFFF;
+      text-shadow: 1px 1px #000;
     }
     .game-card a {
       text-decoration: none;
