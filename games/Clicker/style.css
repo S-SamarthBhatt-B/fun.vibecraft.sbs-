@@ -38,14 +38,19 @@ h1, h2 {
   align-items: flex-start;
 }
 
-#challengeContainer, #clickerContainer, #shopContainer {
-  background-color: var(--deep-indigo);
+#challengeContainer, #clickerContainer, #shopContainer, #recordContainer {
+  background-color: var(--deep-indigo); /* fallback color */
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 0 15px var(--glow-blue);
   text-align: center;
   width: 280px;
   flex-shrink: 0;
+
+  /* Background images */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 900px) {
@@ -53,31 +58,9 @@ h1, h2 {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #challengeContainer, #clickerContainer, #shopContainer {
+  #challengeContainer, #clickerContainer, #shopContainer, #recordContainer {
     width: 90%;
   }
-}
-
-#leaderboard {
-  background-color: var(--deep-indigo);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 0 15px var(--glow-blue);
-  margin-top: 2rem;
-  width: 90%;
-  max-width: 1000px;
-}
-
-#leaderboard ul {
-  list-style: none;
-  padding: 0;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-#leaderboard li {
-  padding: 0.4rem 0;
-  border-bottom: 1px solid var(--muted-lavender);
 }
 
 p, label {
@@ -141,24 +124,62 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-#adminControls {
-  margin-top: 1rem;
-  text-align: center;
-}
-
 @media (max-width: 600px) {
   #mainLayout {
     flex-direction: column;
     align-items: center;
   }
-  #challengeContainer, #clickerContainer, #shopContainer {
+  #challengeContainer, #clickerContainer, #shopContainer, #recordContainer {
     width: 90%;
-  }
-  #leaderboard {
-    width: 95%;
   }
   img#cookie {
     width: 120px;
     height: 120px;
+  }
+}
+
+/* Challenge Records Table Styling */
+#recordTable {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background-color: var(--dark-purple);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--glow-blue);
+}
+
+#recordTable th, #recordTable td {
+  padding: 0.5rem;
+  border: 1px solid var(--glow-blue);
+  color: var(--bright-white);
+}
+
+#recordTable th {
+  background-color: var(--electric-aqua); /* changed Challenge Records color to #00ffff */
+  color: var(--bright-white);
+}
+
+#recordTable tr:nth-child(even) {
+  background-color: var(--deep-indigo);
+}
+
+#recordTable tr:nth-child(odd) {
+  background-color: #221f3a;
+}
+
+/* Center record container below clicker */
+#recordContainer {
+  margin: 2rem auto 0 auto;
+  width: 600px;
+  max-width: 90%;
+  flex-shrink: 0;
+  /* Override width for responsive */
+}
+
+@media (max-width: 900px) {
+  #recordContainer {
+    width: 90%;
   }
 }
